@@ -10,7 +10,7 @@ class ScanQRCode extends StatefulWidget {
 }
 
 class _ScanQRCodeState extends State<ScanQRCode> {
-  String qrCode = 'Unknown';
+  String qrCode = 'Unknown data ';
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,10 @@ class _ScanQRCodeState extends State<ScanQRCode> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Scan Result',
+              qrCode,
               style: TextStyle(
                   fontSize: 16,
                   color: Colors.white60,
@@ -32,7 +33,7 @@ class _ScanQRCodeState extends State<ScanQRCode> {
               height: 8,
             ),
             Text(
-              'QR Code',
+              '---',
               style: TextStyle(
                   fontSize: 16,
                   color: Colors.white60,
